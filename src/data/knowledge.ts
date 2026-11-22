@@ -1,0 +1,5 @@
+export const knowledgeArticles = [
+  {id:"ordering",title:"Per-worker event ordering",summary:"Hire, transfer, leave, and return events execute in effective-date order for each worker.",content:"FIFO ordering prevents a late-arriving hire from reactivating a terminated identity. Conflicting source events enter a visible exception queue.",tags:["worker","event","ordering","fifo"]},
+  {id:"rules",title:"Birthright rule preview",summary:"Rule changes execute against the current effective-dated population in dry-run mode before publication.",content:"The preview lists who gains and loses each package, target task counts, conflicts, and policy test results. Publishing requires step-up and independent review.",tags:["birthright","rule","preview","access"]},
+  {id:"termination",title:"Termination latency SLO",summary:"Latency runs from the authoritative HR event receipt to verified credential disable on the last required target.",content:"Target receipts, retries, human handoffs, and reconciliation results make every delay explainable and auditable.",tags:["termination","slo","offboarding","receipt"]},
+];

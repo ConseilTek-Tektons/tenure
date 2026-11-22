@@ -1,0 +1,31 @@
+{
+  "realm": "tenure",
+  "enabled": true,
+  "displayName": "Tenure local identity broker",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "clients": [
+    {
+      "clientId": "tenure-web",
+      "name": "Tenure Web",
+      "enabled": true,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "local-dev-secret",
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": ["http://localhost:3000/api/auth/callback/enterprise-sso"],
+      "webOrigins": ["http://localhost:3000"],
+      "protocol": "openid-connect",
+      "defaultClientScopes": ["web-origins", "acr", "roles", "profile", "email", "groups"]
+    }
+  ],
+  "groups": [
+    { "name": "tenure-owners" },
+    { "name": "tenure-admins" },
+    { "name": "lifecycle-rule-owners" },
+    { "name": "provisioning-operators" },
+    { "name": "hr-business-partners" },
+    { "name": "application-owners" },
+    { "name": "internal-audit" }
+  ]
+}
